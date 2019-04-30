@@ -13,7 +13,7 @@ public class White2 {
 			Score math = new Score(scanner.nextLine());
 			System.out.print((english.value+math.value)/2);
 		    }catch( ScoreFormatException e){
-		    	e.printStackTrace();
+		    	e.print();
 		}
 		
   }
