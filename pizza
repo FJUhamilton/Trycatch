@@ -1,0 +1,35 @@
+import java.util.* ;
+public class MotherShip {
+	public static void main(String[] args) {
+		try {
+		Scanner scanner = new Scanner(System.in);
+		 System.out.println("Pizza 想切幾片:");
+		 int a= scanner.nextInt();
+		 if(a==0)
+				throw new ClassCastException();
+		 if((1<=a&&a<=7)||(9<=a&&a<=11)||(13<=a&&a<=15))
+				throw new NullPointerException();
+		 if((a==8)||(a==12)||(a==16))
+				throw new SecurityException();
+		 if((a>1)||(a>16))
+				throw new IndexOutOfBoundsException();
+		
+		}
+		catch (ClassCastException e ) {
+			System.out.print("你確定不要切");
+		}
+		catch (NullPointerException e ) {
+			System.out.print("數量錯誤");
+		}
+		catch (SecurityException e ) {
+			System.out.print("謝謝選購");
+		}
+		catch (IndexOutOfBoundsException e ) {
+			System.out.print("超出範圍");
+		}
+		catch (Exception e ) {
+			System.out.print("格式錯誤");
+		}
+		
+}
+}
