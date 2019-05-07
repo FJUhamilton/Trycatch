@@ -1,0 +1,20 @@
+package com.dom;
+import java.io.*;
+
+public class Transfer {
+
+	public static void main(String[] args) {
+		int a = Integer.parseInt("35");
+		File file = new File("C:\\40757");
+		if(file.exists() && file.isAbsolute()) {
+			File[] files = file.listFiles();
+			for(File f : files) {
+				System.out.println(f);
+			}
+		File d= new File(file,"aaa\\bbb\\ccc");
+		System.out.println(d.mkdirs());
+		System.out.println(d.getAbsolutePath());
+		}
+		}
+	}
+
