@@ -1,0 +1,32 @@
+import java.io.*;
+
+public class JavaExam {
+
+    public static void main(String[] args)   {
+        PrintWriter pw = null;
+        try{
+            FileWriter fw = new FileWriter("result.txt");
+            pw = new PrintWriter(fw);
+           //fos.write(0x004A);
+//            fos.write(0x0041);
+//            fos.write(0x0056);
+//            fos.write(0x0041);
+//            fos.write(" ");
+//            fos.write(0x90B1);
+//            fos.write(0x6D69);
+//            fos.write(0x5BB8);
+            pw.write("JAVA MGCHIU1");
+            pw.flush();
+
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally{
+            if (pw != null){
+                pw.close();
+            }
+        }
+
+    }
+}
